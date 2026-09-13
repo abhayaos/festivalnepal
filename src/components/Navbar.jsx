@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Emoji from "./Emoji";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -8,7 +7,6 @@ const navLinks = [
   { to: "/gallery", label: "Gallery" },
   { to: "/blog", label: "Blog" },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -26,34 +24,21 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-gray-950/90 backdrop-blur-xl shadow-lg shadow-orange-500/5 border-b border-orange-500/10"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/40 backdrop-blur-2xl backdrop-saturate-150 shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] ${
+        scrolled ? "bg-white/40" : "bg-white/20"
       }`}
+      style={{
+        WebkitBackdropFilter: "blur(24px) saturate(1.5)",
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <span className="text-3xl md:text-4xl group-hover:scale-110 transition-transform duration-300 inline-flex items-center">
-              <Emoji char="🕯️" size="1.1em" />
+          <Link to="/" className="flex items-center gap-2 group">
+            <span className="w-3 h-3 rounded-full bg-[#FF3D2E] border-2 border-[#141414] group-hover:scale-125 transition-transform duration-300" />
+            <span className="font-display text-lg md:text-xl font-bold tracking-tight leading-none text-[#141414]">
+              Festival Nepal
             </span>
-            <div className="flex flex-col">
-              <span
-                className="text-lg md:text-xl font-black tracking-tight leading-none"
-                style={{
-                  background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                Festival Nepal
-              </span>
-              <span className="text-[10px] tracking-[0.25em] uppercase text-orange-400/50 leading-none mt-0.5">
-                Divine Celebrations
-              </span>
-            </div>
           </Link>
 
           {/* Desktop nav */}
@@ -64,16 +49,13 @@ export default function Navbar() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`relative px-4 py-2 text-sm font-medium tracking-wider uppercase transition-all duration-300 rounded-lg ${
+                  className={`relative px-4 py-2 text-sm font-semibold tracking-wide transition-all duration-200 rounded-full ${
                     active
-                      ? "text-orange-400"
-                      : "text-gray-400 hover:text-orange-300"
+                      ? "text-[#141414] bg-white border-2 border-[#141414]"
+                      : "text-gray-500 hover:text-[#141414]"
                   }`}
                 >
                   {link.label}
-                  {active && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500" />
-                  )}
                 </Link>
               );
             })}
@@ -84,9 +66,9 @@ export default function Navbar() {
             to="/festivals"
             className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-              color: "#0a0a0a",
-              boxShadow: "0 0 20px rgba(255,107,53,0.3)",
+              background: "#111827",
+              color: "#ffffff",
+              boxShadow: "0 4px 14px rgba(17,24,39,0.25)",
             }}
           >
             <span>Explore</span>
@@ -102,17 +84,17 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`w-6 h-0.5 bg-orange-400 transition-all duration-300 ${
+              className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${
                 mobileOpen ? "rotate-45 translate-y-2" : ""
               }`}
             />
             <span
-              className={`w-6 h-0.5 bg-orange-400 transition-all duration-300 ${
+              className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${
                 mobileOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`w-6 h-0.5 bg-orange-400 transition-all duration-300 ${
+              className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${
                 mobileOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             />
@@ -126,7 +108,7 @@ export default function Navbar() {
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-gray-950/95 backdrop-blur-xl border-t border-orange-500/10 px-4 py-4 space-y-1">
+        <div className="bg-white/60 backdrop-blur-2xl backdrop-saturate-150 border-t border-white/40 px-4 py-4 space-y-1 shadow-xl">
           {navLinks.map((link) => {
             const active = location.pathname === link.to;
             return (
@@ -136,8 +118,8 @@ export default function Navbar() {
                 onClick={closeMobile}
                 className={`block px-4 py-3 rounded-lg text-sm font-medium tracking-wider uppercase transition-all duration-300 ${
                   active
-                    ? "text-orange-400 bg-orange-500/10"
-                    : "text-gray-400 hover:text-orange-300 hover:bg-orange-500/5"
+                    ? "text-gray-900 bg-gray-100"
+                    : "text-gray-500 hover:text-gray-900 hover:bg-gray-100"
                 }`}
               >
                 {link.label}
@@ -149,8 +131,8 @@ export default function Navbar() {
             onClick={closeMobile}
             className="block px-4 py-3 mt-2 rounded-full text-sm font-bold tracking-wider uppercase text-center transition-all duration-300"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-              color: "#0a0a0a",
+              background: "#111827",
+              color: "#ffffff",
             }}
           >
             Explore Festivals

@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import Emoji from "../components/Emoji";
 
+import indusValley from "../assets/about/indus-valley.avif";
+import bornOfBuddha from "../assets/about/bornofbuddha.avif";
+import mallaDynasty from "../assets/about/malla-dynesty.avif";
+import unification from "../assets/about/unification.avif";
+import livingHeritage from "../assets/about/living-heritage.avif";
+
 const timeline = [
-  { year: "3000 BCE", title: "Indus Valley Beginnings", desc: "Ancient Vedic traditions take root in the region that would become Nepal." },
-  { year: "563 BCE", title: "Birth of Buddha", desc: "Siddhartha Gautama is born in Lumbini, founding Buddhism." },
-  { year: "12th CE", title: "Malla Dynasty", desc: "Newar culture flourishes. Major festivals like Indra Jatra and Bisket Jatra are formalized." },
-  { year: "1768", title: "Unification", desc: "King Prithvi Narayan Shah unifies Nepal, blending diverse festival traditions." },
-  { year: "Today", title: "Living Heritage", desc: "Nepal's festivals remain vibrant, practiced across 7 provinces by 125+ ethnic groups." },
+  { year: "3000 BCE", title: "Indus Valley Beginnings", desc: "Ancient Vedic traditions take root in the region that would become Nepal.", img: indusValley },
+  { year: "563 BCE", title: "Birth of Buddha", desc: "Siddhartha Gautama is born in Lumbini, founding Buddhism.", img: bornOfBuddha },
+  { year: "12th CE", title: "Malla Dynasty", desc: "Newar culture flourishes. Major festivals like Indra Jatra and Bisket Jatra are formalized.", img: mallaDynasty },
+  { year: "1768", title: "Unification", desc: "King Prithvi Narayan Shah unifies Nepal, blending diverse festival traditions.", img: unification },
+  { year: "Today", title: "Living Heritage", desc: "Nepal's festivals remain vibrant, practiced across 7 provinces by 125+ ethnic groups.", img: livingHeritage },
 ];
 
 export default function About() {
@@ -14,13 +20,13 @@ export default function About() {
     <div className="pt-24 pb-20">
       {/* Hero header */}
       <section className="text-center px-4 mb-20">
-        <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+        <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
           Our Story
         </span>
         <h1
           className="text-4xl md:text-6xl font-black mb-4"
           style={{
-            background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+            background: "linear-gradient(135deg, #111827, #111827)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -30,6 +36,17 @@ export default function About() {
         <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
           A land where mountains touch the sky and traditions touch the soul. Nepal's festivals
           are windows into one of the world's oldest living cultures.
+        </p>
+        <p className="text-[11px] text-gray-400 tracking-[0.3em] uppercase mt-12">
+          Created by
+        </p>
+        <p className="text-4xl md:text-6xl font-black tracking-tight uppercase mt-4 mb-6"
+          style={{
+            color: "transparent",
+            WebkitTextStroke: "2px #111827",
+          }}
+        >
+          Abhaya Bikram Shahi
         </p>
       </section>
 
@@ -41,14 +58,14 @@ export default function About() {
             <h2
               className="text-2xl md:text-3xl font-black mb-6"
               style={{
-                background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+                background: "linear-gradient(135deg, #111827, #111827)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
               The Soul of a Nation
             </h2>
-            <div className="space-y-4 text-gray-400 text-sm leading-relaxed">
+            <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
               <p>
                 Nepal sits at the crossroads of India, China, and Central Asia — a geographic
                 reality that has shaped its incredible cultural diversity. From the Newar
@@ -84,13 +101,13 @@ export default function About() {
                 key={item.title}
                 className="flex gap-4 p-4 rounded-xl transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                  border: "1px solid rgba(255,107,53,0.1)",
+                  background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                  border: "1px solid rgba(17,24,39,0.08)",
                 }}
               >
                 <span className="inline-flex items-center text-2xl shrink-0 mt-0.5"><Emoji char={item.icon} size="1.2rem" /></span>
                 <div>
-                  <h4 className="text-sm font-bold text-orange-300 mb-0.5">{item.title}</h4>
+                  <h4 className="text-sm font-bold text-gray-900 mb-0.5">{item.title}</h4>
                   <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
@@ -105,7 +122,7 @@ export default function About() {
           <h2
             className="text-2xl md:text-3xl font-black mb-3"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+              background: "linear-gradient(135deg, #111827, #111827)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -117,7 +134,7 @@ export default function About() {
 
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-orange-500/40 via-orange-500/20 to-transparent" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gray-400 via-gray-300 to-transparent" />
 
           <div className="space-y-12">
             {timeline.map((item, i) => (
@@ -128,13 +145,28 @@ export default function About() {
                 }`}
               >
                 {/* Dot */}
-                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 border-orange-500 bg-gray-950 z-10" />
+                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 border-gray-800 bg-white z-10" />
 
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:text-right md:pr-8" : "md:text-left md:pl-8"}`}>
-                  <span className="text-xs text-orange-400/60 tracking-widest uppercase">{item.year}</span>
-                  <h4 className="text-base font-bold text-orange-200 mt-1">{item.title}</h4>
+                  <span className="text-xs text-gray-500 tracking-widest uppercase">{item.year}</span>
+                  <h4 className="text-base font-bold text-gray-900 mt-1">{item.title}</h4>
                   <p className="text-sm text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
+                </div>
+
+                {/* Image */}
+                <div className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pl-8" : "md:pr-8"}`}>
+                  <div
+                    className="rounded-xl overflow-hidden"
+                    style={{ border: "1px solid rgba(17,24,39,0.08)" }}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      loading="lazy"
+                      className="w-full h-48 md:h-56 object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
@@ -148,7 +180,7 @@ export default function About() {
           <h2
             className="text-2xl md:text-3xl font-black mb-3"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+              background: "linear-gradient(135deg, #111827, #111827)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -171,21 +203,21 @@ export default function About() {
               key={fact.label}
               className="text-center p-5 rounded-xl"
               style={{
-                background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                border: "1px solid rgba(255,107,53,0.1)",
+                background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                border: "1px solid rgba(17,24,39,0.08)",
               }}
             >
               <div
                 className="text-xl md:text-2xl font-black mb-1"
                 style={{
-                  background: "linear-gradient(135deg, #FF6B35, #FFD700)",
+                  background: "linear-gradient(135deg, #111827, #374151)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
                 {fact.value}
               </div>
-              <div className="text-[10px] text-orange-400/50 tracking-wider uppercase">{fact.label}</div>
+              <div className="text-[10px] text-gray-500 tracking-wider uppercase">{fact.label}</div>
             </div>
           ))}
         </div>
@@ -195,7 +227,7 @@ export default function About() {
       <section className="max-w-3xl mx-auto px-4 text-center">
         <span className="inline-flex items-center justify-center text-4xl mb-4"><Emoji char="🌺" size="2rem" /></span>
         <h2 className="text-2xl md:text-3xl font-black mb-4" style={{
-          background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+          background: "linear-gradient(135deg, #111827, #111827)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}>
@@ -210,9 +242,9 @@ export default function About() {
             to="/festivals"
             className="px-8 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-              color: "#0a0a0a",
-              boxShadow: "0 0 25px rgba(255,107,53,0.3)",
+              background: "linear-gradient(135deg, #111827, #374151)",
+              color: "#ffffff",
+              boxShadow: "0 0 25px rgba(17,24,39,0.25)",
             }}
           >
             View Festivals
@@ -221,9 +253,9 @@ export default function About() {
             to="/gallery"
             className="px-8 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
             style={{
-              background: "rgba(255,107,53,0.1)",
-              border: "1px solid rgba(255,107,53,0.25)",
-              color: "#FFD700",
+              background: "rgba(17,24,39,0.08)",
+              border: "1px solid rgba(17,24,39,0.2)",
+              color: "#374151",
             }}
           >
             Browse Gallery

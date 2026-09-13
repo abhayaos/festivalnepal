@@ -10,7 +10,7 @@ export default function NotFound() {
           <div
             className="text-[6rem] md:text-[10rem] leading-none font-black tracking-tight"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+              background: "linear-gradient(135deg, #111827, #111827)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -19,14 +19,14 @@ export default function NotFound() {
           </div>
 
           {/* Divider */}
-          <div className="h-px w-28 md:w-px md:h-28 bg-orange-500/30" />
+          <div className="h-px w-28 md:w-px md:h-28 bg-gray-300" />
 
           {/* Message */}
           <div className="text-center md:text-left flex flex-col justify-center max-w-sm">
-            <span className="text-xs tracking-[0.5em] uppercase text-orange-400/50 block mb-3">
+            <span className="text-xs tracking-[0.5em] uppercase text-gray-500 block mb-3">
               Uppsss... <Emoji char="🪔" size="1em" />
             </span>
-            <h1 className="text-2xl md:text-3xl font-black text-orange-100 mb-2 tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-black text-gray-900 mb-2 tracking-tight">
               Page Not Found
             </h1>
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
@@ -38,9 +38,9 @@ export default function NotFound() {
                 to="/"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
                 style={{
-                  background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-                  color: "#0a0a0a",
-                  boxShadow: "0 0 25px rgba(255,107,53,0.3)",
+                  background: "linear-gradient(135deg, #111827, #374151)",
+                  color: "#ffffff",
+                  boxShadow: "0 0 25px rgba(17,24,39,0.25)",
                 }}
               >
                 Go Home

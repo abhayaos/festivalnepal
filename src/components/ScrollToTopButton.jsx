@@ -32,9 +32,9 @@ export default function ScrollToTopButton() {
           : "opacity-0 translate-y-4 pointer-events-none"
       }`}
       style={{
-        background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-        color: "#0a0a0a",
-        boxShadow: "0 0 20px rgba(255,107,53,0.4)",
+        background: "linear-gradient(135deg, #111827, #374151)",
+        color: "#ffffff",
+        boxShadow: "0 4px 14px rgba(17,24,39,0.25)",
       }}
     >
       <svg

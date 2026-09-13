@@ -14,13 +14,13 @@ export default function Contact() {
     <div className="pt-24 pb-20">
       {/* Header */}
       <section className="text-center px-4 mb-16">
-        <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+        <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
           Get in Touch
         </span>
         <h1
           className="text-4xl md:text-6xl font-black mb-4"
           style={{
-            background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+            background: "linear-gradient(135deg, #111827, #111827)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -46,13 +46,13 @@ export default function Contact() {
                 key={item.title}
                 className="p-5 rounded-xl transition-all duration-300 hover:scale-[1.02]"
                 style={{
-                  background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                  border: "1px solid rgba(255,107,53,0.1)",
+                  background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                  border: "1px solid rgba(17,24,39,0.08)",
                 }}
               >
                 <span className="inline-flex items-center text-2xl mb-3"><Emoji char={item.icon} size="1.3rem" /></span>
-                <h4 className="text-sm font-bold text-orange-300 mb-0.5">{item.title}</h4>
-                <p className="text-sm text-orange-200/80 font-medium">{item.value}</p>
+                <h4 className="text-sm font-bold text-gray-900 mb-0.5">{item.title}</h4>
+                <p className="text-sm text-gray-700 font-medium">{item.value}</p>
                 <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
               </div>
             ))}
@@ -62,12 +62,12 @@ export default function Contact() {
               to="/blog"
               className="block p-5 rounded-xl transition-all duration-300 hover:scale-[1.02]"
               style={{
-                background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                border: "1px solid rgba(255,107,53,0.1)",
+                background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                border: "1px solid rgba(17,24,39,0.08)",
               }}
             >
               <span className="inline-flex items-center text-2xl mb-3"><Emoji char="📜" size="1.3rem" /></span>
-              <h4 className="text-sm font-bold text-orange-300 mb-0.5">Our Blog</h4>
+              <h4 className="text-sm font-bold text-gray-900 mb-0.5">Our Blog</h4>
               <p className="text-xs text-gray-500 mt-1">Nepal's history and the stories of Dashain and Tihar — in-depth guides in English.</p>
             </Link>
           </div>
@@ -78,13 +78,13 @@ export default function Contact() {
               <div
                 className="p-10 rounded-2xl text-center"
                 style={{
-                  background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                  border: "1px solid rgba(255,107,53,0.12)",
+                  background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                  border: "1px solid rgba(17,24,39,0.1)",
                 }}
               >
                 <span className="inline-flex items-center justify-center text-5xl mb-4"><Emoji char="🙏" size="2.5rem" /></span>
                 <h3 className="text-2xl font-bold mb-2" style={{
-                  background: "linear-gradient(135deg, #FF6B35, #FFD700)",
+                  background: "linear-gradient(135deg, #111827, #374151)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}>
@@ -97,9 +97,9 @@ export default function Contact() {
                   onClick={() => setSubmitted(false)}
                   className="mt-6 px-6 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
                   style={{
-                    background: "rgba(255,107,53,0.1)",
-                    border: "1px solid rgba(255,107,53,0.25)",
-                    color: "#FFD700",
+                    background: "rgba(17,24,39,0.08)",
+                    border: "1px solid rgba(17,24,39,0.2)",
+                    color: "#374151",
                   }}
                 >
                   Send Another
@@ -110,56 +110,56 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 className="p-8 md:p-10 rounded-2xl space-y-5"
                 style={{
-                  background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                  border: "1px solid rgba(255,107,53,0.12)",
+                  background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                  border: "1px solid rgba(17,24,39,0.1)",
                 }}
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs text-orange-400/60 tracking-wider uppercase mb-1.5">
+                    <label className="block text-xs text-gray-500 tracking-wider uppercase mb-1.5">
                       Name
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="Your name"
-                      className="w-full px-4 py-3 rounded-xl text-sm bg-gray-900/60 border border-orange-500/15 text-orange-100 placeholder-gray-600 focus:outline-none focus:border-orange-500/40 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl text-sm bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400/40 transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-orange-400/60 tracking-wider uppercase mb-1.5">
+                    <label className="block text-xs text-gray-500 tracking-wider uppercase mb-1.5">
                       Email
                     </label>
                     <input
                       type="email"
                       required
                       placeholder="your@email.com"
-                      className="w-full px-4 py-3 rounded-xl text-sm bg-gray-900/60 border border-orange-500/15 text-orange-100 placeholder-gray-600 focus:outline-none focus:border-orange-500/40 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl text-sm bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400/40 transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs text-orange-400/60 tracking-wider uppercase mb-1.5">
+                  <label className="block text-xs text-gray-500 tracking-wider uppercase mb-1.5">
                     Subject
                   </label>
                   <input
                     type="text"
                     required
                     placeholder="What is this about?"
-                    className="w-full px-4 py-3 rounded-xl text-sm bg-gray-900/60 border border-orange-500/15 text-orange-100 placeholder-gray-600 focus:outline-none focus:border-orange-500/40 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl text-sm bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400/40 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs text-orange-400/60 tracking-wider uppercase mb-1.5">
+                  <label className="block text-xs text-gray-500 tracking-wider uppercase mb-1.5">
                     Message
                   </label>
                   <textarea
                     required
                     rows={5}
                     placeholder="Tell us about your inquiry..."
-                    className="w-full px-4 py-3 rounded-xl text-sm bg-gray-900/60 border border-orange-500/15 text-orange-100 placeholder-gray-600 focus:outline-none focus:border-orange-500/40 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl text-sm bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400/40 transition-colors resize-none"
                   />
                 </div>
 
@@ -167,9 +167,9 @@ export default function Contact() {
                   type="submit"
                   className="w-full py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-[1.02]"
                   style={{
-                    background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-                    color: "#0a0a0a",
-                    boxShadow: "0 0 25px rgba(255,107,53,0.3)",
+                    background: "linear-gradient(135deg, #111827, #374151)",
+                    color: "#ffffff",
+                    boxShadow: "0 0 25px rgba(17,24,39,0.25)",
                   }}
                 >
                   Send Message
@@ -182,13 +182,13 @@ export default function Contact() {
         {/* Blog section */}
         <section className="mt-20">
           <div className="text-center mb-10">
-            <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+            <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
               Hamro Blog
             </span>
             <h2
               className="text-3xl md:text-4xl font-black mb-4"
               style={{
-                background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+                background: "linear-gradient(135deg, #111827, #111827)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -212,12 +212,12 @@ export default function Contact() {
                 to={post.to}
                 className="p-6 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1"
                 style={{
-                  background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                  border: "1px solid rgba(255,107,53,0.1)",
+                  background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                  border: "1px solid rgba(17,24,39,0.08)",
                 }}
               >
                 <span className="inline-flex items-center text-3xl mb-3"><Emoji char={post.emoji} size="1.6rem" /></span>
-                <h4 className="text-sm font-bold text-orange-300 mb-1.5">{post.title}</h4>
+                <h4 className="text-sm font-bold text-gray-900 mb-1.5">{post.title}</h4>
                 <p className="text-xs text-gray-500 leading-relaxed">{post.desc}</p>
               </Link>
             ))}

@@ -6,10 +6,9 @@ export default function FestivalCard({ festival, index = 0 }) {
 
   return (
     <div
-      className="group relative rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 cursor-pointer"
+      className="group relative rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 cursor-pointer bg-white shadow-sm hover:shadow-md"
       style={{
-        background: "linear-gradient(135deg, rgba(255,107,53,0.08), rgba(247,147,30,0.04))",
-        border: "1px solid rgba(255,107,53,0.12)",
+        border: "1px solid #E5E7EB",
         animationDelay: `${index * 0.1}s`,
       }}
     >
@@ -17,7 +16,7 @@ export default function FestivalCard({ festival, index = 0 }) {
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
-          background: "radial-gradient(circle at 50% 0%, rgba(255,107,53,0.1), transparent 70%)",
+          background: "radial-gradient(circle at 50% 0%, rgba(17,24,39,0.05), transparent 70%)",
         }}
       />
 
@@ -27,7 +26,7 @@ export default function FestivalCard({ festival, index = 0 }) {
           <span className="inline-flex items-center text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-300">
             <Emoji char={emoji} size="2.5rem" />
           </span>
-          <span className="text-xs text-orange-400/60 tracking-wider uppercase bg-orange-500/10 px-3 py-1 rounded-full">
+          <span className="text-xs text-gray-900 tracking-wider uppercase bg-gray-100 border border-gray-200 px-3 py-1 rounded-full">
             {date}
           </span>
         </div>
@@ -36,7 +35,7 @@ export default function FestivalCard({ festival, index = 0 }) {
         <h3
           className="text-xl md:text-2xl font-bold mb-2 transition-colors duration-300"
           style={{
-            background: `linear-gradient(135deg, ${color || "#FF6B35"}, #FFD700)`,
+            background: `linear-gradient(135deg, ${color || "#111827"}, #374151)`,
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -45,7 +44,7 @@ export default function FestivalCard({ festival, index = 0 }) {
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-400 leading-relaxed mb-6 line-clamp-3">
+        <p className="text-sm text-gray-600 leading-relaxed mb-6 line-clamp-3">
           {description}
         </p>
 
@@ -53,7 +52,7 @@ export default function FestivalCard({ festival, index = 0 }) {
         {link && (
           <Link
             to={link}
-            className="inline-flex items-center gap-2 text-sm font-medium text-orange-400/80 hover:text-orange-300 transition-colors duration-300 group/link"
+            className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-500 transition-colors duration-300 group/link"
           >
             <span>Learn more</span>
             <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +66,7 @@ export default function FestivalCard({ festival, index = 0 }) {
       <div
         className="h-0.5 w-full origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
         style={{
-          background: `linear-gradient(90deg, ${color || "#FF6B35"}, #FFD700)`,
+          background: `linear-gradient(90deg, ${color || "#111827"}, #374151)`,
         }}
       />
     </div>

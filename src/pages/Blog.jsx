@@ -10,7 +10,7 @@ const posts = [
     subtitle: "From the Malla kingdoms to the federal republic",
     excerpt:
       "Five centuries of kings, movements, earthquakes, and rebuilding — and how that past shaped the festivals Nepal celebrates today.",
-    gradient: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+    gradient: "linear-gradient(135deg, #111827, #111827)",
   },
   {
     to: "/blog/dashain-story",
@@ -20,7 +20,7 @@ const posts = [
     subtitle: "Origins, rituals, and meaning",
     excerpt:
       "The legend of Mahishasura and Durga, the 15-day calendar, tika and jamara — everything behind Nepal's great homecoming.",
-    gradient: "linear-gradient(135deg, #E91E63, #FF6B35)",
+    gradient: "linear-gradient(135deg, #111827, #111827)",
   },
   {
     to: "/blog/tihar-story",
@@ -30,7 +30,7 @@ const posts = [
     subtitle: "Five days of lamps, animals & siblings",
     excerpt:
       "Yama and Yamuna, Lakshmi Puja, Deusi-Bhailo, and the glowing nights that make Tihar the most magical week of the year.",
-    gradient: "linear-gradient(135deg, #F7931E, #FFD700)",
+    gradient: "linear-gradient(135deg, #374151, #111827)",
   },
 ];
 
@@ -39,13 +39,13 @@ export default function Blog() {
     <div className="pt-24 pb-20">
       {/* Header */}
       <section className="text-center px-4 mb-14">
-        <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+        <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
           Stories & Guides
         </span>
         <h1
           className="text-4xl md:text-6xl font-black mb-4"
           style={{
-            background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+            background: "linear-gradient(135deg, #111827, #111827)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -67,15 +67,15 @@ export default function Blog() {
               to={post.to}
               className="group relative p-8 rounded-2xl flex flex-col transition-transform duration-300 hover:scale-[1.02] transform-gpu"
               style={{
-                background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
-                border: "1px solid rgba(255,107,53,0.1)",
+                background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.02))",
+                border: "1px solid rgba(17,24,39,0.08)",
               }}
             >
               {/* Hover glow */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{
-                  background: "radial-gradient(circle at 50% 0%, rgba(255,107,53,0.1), transparent 70%)",
+                  background: "radial-gradient(circle at 50% 0%, rgba(17,24,39,0.08), transparent 70%)",
                   borderRadius: "1rem",
                 }}
               />
@@ -85,7 +85,7 @@ export default function Blog() {
                   <span className="inline-flex items-center text-5xl group-hover:scale-110 transition-transform duration-300">
                     <Emoji char={post.emoji} size="2.6rem" />
                   </span>
-                  <span className="text-[10px] tracking-widest uppercase text-orange-400/60 bg-orange-500/10 px-3 py-1 rounded-full">
+                  <span className="text-[10px] tracking-widest uppercase text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
                     {post.tag}
                   </span>
                 </div>
@@ -100,10 +100,10 @@ export default function Blog() {
                 >
                   {post.title}
                 </h2>
-                <p className="text-sm text-orange-300/80 font-medium mb-3">{post.subtitle}</p>
+                <p className="text-sm text-gray-900 font-medium mb-3">{post.subtitle}</p>
                 <p className="text-sm text-gray-500 leading-relaxed mb-8 flex-1">{post.excerpt}</p>
 
-                <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-orange-400/80 group-hover:text-orange-300 transition-colors duration-300">
+                <span className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-gray-500/80 group-hover:text-gray-900 transition-colors duration-300">
                   Read article
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -125,9 +125,9 @@ export default function Blog() {
             to="/festivals"
             className="px-6 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-transform duration-300 hover:scale-105 transform-gpu"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-              color: "#0a0a0a",
-              boxShadow: "0 0 25px rgba(255,107,53,0.3)",
+              background: "linear-gradient(135deg, #111827, #374151)",
+              color: "#ffffff",
+              boxShadow: "0 0 25px rgba(17,24,39,0.25)",
             }}
           >
             <Emoji char="🏮" size="1em" /> Festivals
@@ -136,9 +136,9 @@ export default function Blog() {
             to="/gallery"
             className="px-6 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-transform duration-300 hover:scale-105 transform-gpu"
             style={{
-              background: "rgba(255,107,53,0.1)",
-              border: "1px solid rgba(255,107,53,0.25)",
-              color: "#FFD700",
+              background: "rgba(17,24,39,0.08)",
+              border: "1px solid rgba(17,24,39,0.2)",
+              color: "#374151",
             }}
           >
             <Emoji char="🖼️" size="1em" /> Gallery

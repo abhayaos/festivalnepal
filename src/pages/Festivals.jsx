@@ -10,7 +10,7 @@ const allFestivals = [
     date: "Oct 11 - Oct 26, 2026",
     month: "October",
     description: "Nepal's grandest and longest festival. For fifteen days, families gather for tika ceremonies, jamara (barley grass), kite flying, and the thrilling pendal (bamboo swinging). Dashain celebrates the victory of Goddess Durga over the demon Mahishasura.",
-    color: "#FF6B35",
+    color: "#111827",
     tags: ["Hindu", "National", "15 Days"],
   },
   {
@@ -19,7 +19,7 @@ const allFestivals = [
     date: "Nov 8 - Nov 12, 2026",
     month: "November",
     description: "The five-day festival of lights. Day 1 honors crows (Kaag Tihar), Day 2 honors dogs (Kukur Tihar), Day 3 honors cows (Gai Tihar) and worships Goddess Lakshmi, Day 4 is Mha Puja (self-worship), and Day 5 celebrates brother-sister bonds (Bhai Tika).",
-    color: "#F7931E",
+    color: "#374151",
     tags: ["Hindu", "Lights", "5 Days"],
   },
   {
@@ -28,7 +28,7 @@ const allFestivals = [
     date: "March 2027",
     month: "March",
     description: "The spectacular festival of colors celebrates the arrival of spring and the divine love of Radha and Krishna. In Terai it falls one day after Kathmandu. Nepal becomes a canvas of vibrant gulal powder and water.",
-    color: "#E91E63",
+    color: "#111827",
     tags: ["Hindu", "Colors", "Spring"],
   },
   {
@@ -37,7 +37,7 @@ const allFestivals = [
     date: "Oct 26 - Oct 29, 2026",
     month: "October",
     description: "An ancient Vedic festival dedicated to the Sun God Surya and his sister Chhathi Maiya. Devotees observe strict fasting and perform rituals at riverbanks during the sacred hours of dawn and dusk.",
-    color: "#FF9800",
+    color: "#374151",
     tags: ["Hindu", "Sun Worship", "4 Days"],
   },
   {
@@ -46,7 +46,7 @@ const allFestivals = [
     date: "Sept 2026",
     month: "September",
     description: "Kathmandu's grand festival honoring Lord Indra, the god of rain. Features the chariot procession of the Living Goddess Kumari, traditional dances of Mahakali and Lakhey, and the ceremonial raising of the lingo (wooden pole).",
-    color: "#9C27B0",
+    color: "#111827",
     tags: ["Newar", "Kathmandu", "8 Days"],
   },
   {
@@ -55,7 +55,7 @@ const allFestivals = [
     date: "April 2027",
     month: "April",
     description: "Bhaktapur's spectacular New Year festival. The highlight is the fierce tug-of-war over a massive wooden pole (bisko) between teams from the east and west of the city, symbolizing the battle between good and evil.",
-    color: "#4CAF50",
+    color: "#374151",
     tags: ["Newar", "Bhaktapur", "9 Days"],
   },
   {
@@ -64,7 +64,7 @@ const allFestivals = [
     date: "May 2027",
     month: "May",
     description: "Celebrating the birth, enlightenment, and death of Gautama Buddha at Lumbini, Nepal. Monasteries across the country hold special prayers, butter lamp ceremonies, and processions.",
-    color: "#FF9800",
+    color: "#374151",
     tags: ["Buddhist", "Lumbini", "Sacred"],
   },
   {
@@ -73,7 +73,7 @@ const allFestivals = [
     date: "Aug 2026",
     month: "August",
     description: "The 'Festival of Cows' commemorates those who passed away in the past year. Families send a cow (or a child dressed as one) in procession. The day is filled with satirical comedy, humor, and social commentary.",
-    color: "#795548",
+    color: "#57534E",
     tags: ["Newar", "Humor", "Commemoration"],
   },
   {
@@ -82,7 +82,7 @@ const allFestivals = [
     date: "Aug 2026",
     month: "August",
     description: "Hindu women's festival dedicated to Goddess Parvati. Women dress in red saris, sing and dance through the night, and fast for the longevity of their husbands. Pashupatinath Temple is the epicenter of celebrations.",
-    color: "#F44336",
+    color: "#111827",
     tags: ["Hindu", "Women", "Pashupatinath"],
   },
   {
@@ -91,7 +91,7 @@ const allFestivals = [
     date: "Jan 14, 2027",
     month: "January",
     description: "The harvest festival marking the sun's transition into Capricorn. People take holy baths, prepare til (sesame) sweets, and fly kites. Maghe Sankranti is especially important at Devghat and various river confluences.",
-    color: "#FF5722",
+    color: "#111827",
     tags: ["Hindu", "Harvest", "Winter"],
   },
   {
@@ -100,7 +100,7 @@ const allFestivals = [
     date: "Aug 2026",
     month: "August",
     description: "The sacred thread festival where Brahmins change their janai (sacred thread). Everyone ties a protective thread (raksha bandhan) on their wrist. Gosaikunda Lake becomes a major pilgrimage site.",
-    color: "#607D8B",
+    color: "#4B5563",
     tags: ["Hindu", "Brahmin", "Pilgrimage"],
   },
   {
@@ -109,7 +109,7 @@ const allFestivals = [
     date: "March-April 2027",
     month: "March",
     description: "A grand chariot procession through the old streets of Kathmandu honoring the White Machhindranath, the deity of compassion. The weeks-long journey covers the entire ancient city.",
-    color: "#2196F3",
+    color: "#111827",
     tags: ["Newar", "Kathmandu", "Chariot"],
   },
 ];
@@ -124,13 +124,13 @@ export default function Festivals() {
     <div className="pt-24 pb-20">
       {/* Header */}
       <section className="text-center px-4 mb-14">
-        <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+        <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
           Explore
         </span>
         <h1
           className="text-4xl md:text-6xl font-black mb-4"
           style={{
-            background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+            background: "linear-gradient(135deg, #111827, #111827)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -150,12 +150,12 @@ export default function Festivals() {
               onClick={() => setFilter(m)}
               className={`px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-300 ${
                 filter === m
-                  ? "text-gray-950"
-                  : "text-gray-500 hover:text-orange-300 bg-gray-900/50 border border-orange-500/10"
+                  ? "text-white"
+                  : "text-gray-500 hover:text-gray-900 bg-gray-100 border border-gray-200"
               }`}
               style={
                 filter === m
-                  ? { background: "linear-gradient(135deg, #FF6B35, #F7931E)" }
+                  ? { background: "linear-gradient(135deg, #111827, #374151)" }
                   : {}
               }
             >
@@ -170,14 +170,14 @@ export default function Festivals() {
         <div
           className="p-8 md:p-10 rounded-2xl"
           style={{
-            background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.03))",
-            border: "1px solid rgba(255,107,53,0.12)",
+            background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.03))",
+            border: "1px solid rgba(17,24,39,0.1)",
           }}
         >
           <h3
             className="text-center text-xl md:text-2xl font-bold mb-8"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #FFD700)",
+              background: "linear-gradient(135deg, #111827, #374151)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

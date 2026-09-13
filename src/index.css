@@ -2,27 +2,32 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,107,53,0.3) transparent;
+  scrollbar-color: rgba(17,24,39,0.35) transparent;
 }
 
 body {
-  background: #0a0a0a;
+  background: #FAF9F6;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: #e5e7eb;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: #161616;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', 'Poppins', system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 ::selection {
-  background: rgba(255,107,53,0.3);
-  color: #FFD700;
+  background: #FF3D2E;
+  color: #ffffff;
 }
 
 /* Custom scrollbar for Webkit */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,107,53,0.3); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255,107,53,0.5); }
+::-webkit-scrollbar-thumb { background: #141414; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #FF3D2E; }
 
 /* Animations */
 @keyframes float {
@@ -85,10 +90,74 @@ body {
 
 /* Utility for gradient text without Tailwind arbitrary */
 .gradient-text {
-  background: linear-gradient(135deg, #FF6B35, #F7931E, #FFD700);
+  background: linear-gradient(135deg, #141414, #141414);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ---- Gen Z sticker design system ---- */
+.font-display {
+  font-family: 'Space Grotesk', 'Poppins', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.sticker {
+  background: #ffffff;
+  border: 2px solid #141414;
+  border-radius: 22px;
+  box-shadow: 6px 6px 0 #141414;
+}
+
+.sticker-sm {
+  background: #ffffff;
+  border: 2px solid #141414;
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 #141414;
+}
+
+.btn-chunky {
+  border: 2px solid #141414;
+  box-shadow: 4px 4px 0 #141414;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-chunky:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #141414;
+}
+.btn-chunky:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #141414;
+}
+
+.marker {
+  background-image: linear-gradient(transparent 62%, #FFD84D 62%, #FFD84D 96%, transparent 96%);
+  padding: 0 0.1em;
+}
+
+.marker-red {
+  background-image: linear-gradient(transparent 62%, #FFB3AB 62%, #FFB3AB 96%, transparent 96%);
+  padding: 0 0.1em;
+}
+
+.dot-grid {
+  background-image: radial-gradient(#141414 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.animate-wiggle { animation: wiggle 2.4s ease-in-out infinite; }
 
 /* Smooth page transitions */
 html {

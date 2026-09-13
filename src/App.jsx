@@ -24,7 +24,7 @@ export default function App() {
   const isNotFound = !publicPaths.includes(location.pathname) && !isBlog;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-gray-800">
       <ScrollToTop />
       {!isNotFound && <Navbar />}
       <main className="flex-1">

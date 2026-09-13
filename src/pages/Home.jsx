@@ -10,7 +10,7 @@ const festivals = [
     emoji: "🌺",
     date: "Oct 11 - Oct 26, 2026",
     description: "Nepal's grandest festival celebrating the triumph of good over evil. Families reunite for tika, jamara, and kite flying across the nation.",
-    color: "#FF6B35",
+    color: "#111827",
     link: "/festivals",
   },
   {
@@ -18,7 +18,7 @@ const festivals = [
     emoji: "🕯️",
     date: "Nov 8 - Nov 12, 2026",
     description: "The festival of lights honoring crows, dogs, cows, and the goddess Lakshmi. Homes glow with diyas and colorful rangoli.",
-    color: "#F7931E",
+    color: "#374151",
     link: "/festivals",
   },
   {
@@ -26,7 +26,7 @@ const festivals = [
     emoji: "🎨",
     date: "March 2027",
     description: "The vibrant festival of colors where Nepal erupts in joyous celebration with gulal, water balloons, and unity.",
-    color: "#E91E63",
+    color: "#111827",
     link: "/festivals",
   },
   {
@@ -34,7 +34,7 @@ const festivals = [
     emoji: "☀️",
     date: "Oct 26 - Oct 29, 2026",
     description: "An ancient Hindu festival dedicated to the Sun God Surya with rituals performed at riverbanks during dawn and dusk.",
-    color: "#FF9800",
+    color: "#374151",
     link: "/festivals",
   },
   {
@@ -42,7 +42,7 @@ const festivals = [
     emoji: "🎭",
     date: "Sept 2026",
     description: "The Living Goddess Kumari is paraded through Kathmandu's streets in a grand chariot procession honoring Lord Indra.",
-    color: "#9C27B0",
+    color: "#111827",
     link: "/festivals",
   },
   {
@@ -50,7 +50,7 @@ const festivals = [
     emoji: "🏗️",
     date: "April 2027",
     description: "The New Year festival of Bhaktapur featuring a massive wooden pole tug-of-war and the raising of the bisko pole.",
-    color: "#4CAF50",
+    color: "#374151",
     link: "/festivals",
   },
 ];
@@ -69,21 +69,21 @@ export default function Home() {
       <Hero />
 
       {/* Stats bar */}
-      <section className="relative py-12 border-y border-orange-500/10 bg-gray-950/60">
+      <section className="relative py-12 border-y border-gray-200 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div
                 className="text-3xl md:text-4xl font-black mb-1"
                 style={{
-                  background: "linear-gradient(135deg, #FF6B35, #FFD700)",
+                  background: "linear-gradient(135deg, #111827, #374151)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
                 {stat.value}
               </div>
-              <div className="text-xs text-orange-400/50 tracking-widest uppercase">
+              <div className="text-xs text-gray-500 tracking-widest uppercase">
                 {stat.label}
               </div>
             </div>
@@ -96,13 +96,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section header */}
           <div className="text-center mb-14">
-            <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+            <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
               Celebrations
             </span>
             <h2
               className="text-3xl md:text-5xl font-black mb-4"
               style={{
-                background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+                background: "linear-gradient(135deg, #111827, #111827)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -128,9 +128,9 @@ export default function Home() {
               to="/festivals"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
               style={{
-                background: "rgba(255,107,53,0.1)",
-                border: "1px solid rgba(255,107,53,0.25)",
-                color: "#FFD700",
+                background: "rgba(17,24,39,0.08)",
+                border: "1px solid rgba(17,24,39,0.2)",
+                color: "#374151",
               }}
             >
               View All Festivals
@@ -143,16 +143,16 @@ export default function Home() {
       </section>
 
       {/* Countdown section */}
-      <section className="py-20 md:py-28 border-t border-orange-500/10">
+      <section className="py-20 md:py-28 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+            <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
               Don't Miss Out
             </span>
             <h2
               className="text-3xl md:text-5xl font-black mb-4"
               style={{
-                background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+                background: "linear-gradient(135deg, #111827, #111827)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -185,25 +185,25 @@ export default function Home() {
       </section>
 
       {/* Culture highlights */}
-      <section className="py-20 md:py-28 border-t border-orange-500/10">
+      <section className="py-20 md:py-28 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: text */}
             <div>
-              <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+              <span className="text-xs text-gray-500 tracking-[0.5em] uppercase block mb-3">
                 Our Heritage
               </span>
               <h2
                 className="text-3xl md:text-4xl font-black mb-6"
                 style={{
-                  background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+                  background: "linear-gradient(135deg, #111827, #111827)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
                 A Land of Living Culture
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-6">
                 Nepal is a country where ancient traditions thrive alongside modern life.
                 From the misty peaks of the Himalayas to the fertile plains of Terai, every
                 corner of this nation pulses with cultural energy. Festivals here are not just
@@ -218,9 +218,9 @@ export default function Home() {
                 to="/about"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
                 style={{
-                  background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-                  color: "#0a0a0a",
-                  boxShadow: "0 0 25px rgba(255,107,53,0.3)",
+                  background: "linear-gradient(135deg, #111827, #374151)",
+                  color: "#ffffff",
+                  boxShadow: "0 0 25px rgba(17,24,39,0.25)",
                 }}
               >
                 Discover Nepal
@@ -239,12 +239,12 @@ export default function Home() {
                   key={item.title}
                   className="p-5 rounded-xl transition-all duration-300 hover:scale-105"
                   style={{
-                    background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.03))",
-                    border: "1px solid rgba(255,107,53,0.1)",
+                    background: "linear-gradient(135deg, rgba(17,24,39,0.05), rgba(17,24,39,0.03))",
+                    border: "1px solid rgba(17,24,39,0.08)",
                   }}
                 >
                   <span className="inline-flex items-center text-3xl mb-3"><Emoji char={item.icon} size="1.6rem" /></span>
-                  <h4 className="text-sm font-bold text-orange-300 mb-1">{item.title}</h4>
+                  <h4 className="text-sm font-bold text-gray-900 mb-1">{item.title}</h4>
                   <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -254,13 +254,13 @@ export default function Home() {
       </section>
 
       {/* Newsletter / CTA */}
-      <section className="py-20 md:py-28 border-t border-orange-500/10">
+      <section className="py-20 md:py-28 border-t border-gray-200">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <span className="inline-flex items-center text-5xl mb-6"><Emoji char="🙏" size="2.5rem" /></span>
           <h2
             className="text-3xl md:text-4xl font-black mb-4"
             style={{
-              background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+              background: "linear-gradient(135deg, #111827, #111827)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -275,13 +275,13 @@ export default function Home() {
             <input
               type="email"
               placeholder="your@email.com"
-              className="flex-1 px-5 py-3 rounded-full text-sm bg-gray-900/80 border border-orange-500/20 text-orange-100 placeholder-gray-600 focus:outline-none focus:border-orange-500/50 transition-colors"
+              className="flex-1 px-5 py-3 rounded-full text-sm bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400/50 transition-colors"
             />
             <button
               className="px-6 py-3 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105"
               style={{
-                background: "linear-gradient(135deg, #FF6B35, #F7931E)",
-                color: "#0a0a0a",
+                background: "linear-gradient(135deg, #111827, #374151)",
+                color: "#ffffff",
               }}
             >
               Subscribe

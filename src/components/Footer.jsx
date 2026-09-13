@@ -5,20 +5,17 @@ const footerLinks = {
   Festivals: [
     { label: "Dashain", to: "/festivals" },
     { label: "Tihar", to: "/festivals" },
-    { label: "Holi", to: "/festivals" },
-    { label: "Chhath Puja", to: "/festivals" },
-    { label: "Indra Jatra", to: "/festivals" },
   ],
   Explore: [
     { label: "Gallery", to: "/gallery" },
+    { label: "Blog", to: "/blog" },
     { label: "About Nepal", to: "/about" },
     { label: "Contact", to: "/contact" },
   ],
-  Connect: [
-    { label: "Facebook", href: "#" },
-    { label: "Instagram", href: "#" },
-    { label: "YouTube", href: "#" },
-    { label: "Twitter", href: "#" },
+  Blog: [
+    { label: "History of Nepal", to: "/blog/nepal-history" },
+    { label: "Dashain Story", to: "/blog/dashain-story" },
+    { label: "Tihar Story", to: "/blog/tihar-story" },
   ],
 };
 
@@ -51,7 +48,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-2xl opacity-70">
               <span className="inline-flex items-center"><Emoji char="🙏" size="1.1em" /></span>
-              <span className="text-xs text-orange-400/60 tracking-widest uppercase mt-1">
+              <span className="text-xs text-orange-200/60 tracking-widest uppercase mt-1">
                 Namaste
               </span>
             </div>
@@ -96,7 +93,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Festival Nepal. Made with <Emoji char="🧡" size="0.9em" /> in Nepal.
           </p>
           <p className="text-xs text-gray-700 tracking-widest uppercase">
-            ॐ शान्ति शान्ति शान्तिः
+            Made by Abhaya Bikram Shahi
           </p>
         </div>
       </div>

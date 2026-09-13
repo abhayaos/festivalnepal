@@ -33,10 +33,16 @@ function Unit({ value, label }) {
 }
 
 export default function CountdownTimer({ targetDate, label, subtitle }) {
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
+  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft(targetDate));
 
   useEffect(() => {
-    const timer = setInterval(() => setTimeLeft(getTimeLeft(targetDate)), 1000);
+    let timer = setInterval(() => {
+      const next = getTimeLeft(targetDate);
+      setTimeLeft(next);
+      if (next.days === 0 && next.hours === 0 && next.minutes === 0 && next.seconds === 0) {
+        clearInterval(timer);
+      }
+    }, 1000);
     return () => clearInterval(timer);
   }, [targetDate]);
 

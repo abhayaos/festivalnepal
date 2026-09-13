@@ -65,7 +65,7 @@ export default function FestivalCard({ festival, index = 0 }) {
 
       {/* Bottom gradient line */}
       <div
-        className="h-0.5 w-0 group-hover:w-full transition-all duration-700"
+        className="h-0.5 w-full origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
         style={{
           background: `linear-gradient(90deg, ${color || "#FF6B35"}, #FFD700)`,
         }}

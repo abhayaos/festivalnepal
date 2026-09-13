@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Emoji from "../components/Emoji";
 
 export default function Contact() {
@@ -56,21 +57,19 @@ export default function Contact() {
               </div>
             ))}
 
-            {/* Social links */}
-            <div className="p-5 rounded-xl" style={{ border: "1px solid rgba(255,107,53,0.1)" }}>
-              <h4 className="text-sm font-bold text-orange-300 mb-3">Follow Us</h4>
-              <div className="flex gap-3">
-                {["Facebook", "Instagram", "YouTube", "Twitter"].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="px-3 py-1.5 rounded-full text-xs text-gray-500 hover:text-orange-300 bg-gray-900/50 border border-orange-500/10 transition-all duration-300 hover:border-orange-500/30"
-                  >
-                    {social}
-                  </a>
-                ))}
-              </div>
-            </div>
+            {/* Blog link card */}
+            <Link
+              to="/blog"
+              className="block p-5 rounded-xl transition-all duration-300 hover:scale-[1.02]"
+              style={{
+                background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
+                border: "1px solid rgba(255,107,53,0.1)",
+              }}
+            >
+              <span className="inline-flex items-center text-2xl mb-3"><Emoji char="📜" size="1.3rem" /></span>
+              <h4 className="text-sm font-bold text-orange-300 mb-0.5">Our Blog</h4>
+              <p className="text-xs text-gray-500 mt-1">Nepal's history and the stories of Dashain and Tihar — in-depth guides in English.</p>
+            </Link>
           </div>
 
           {/* Contact form */}
@@ -179,6 +178,51 @@ export default function Contact() {
             )}
           </div>
         </div>
+
+        {/* Blog section */}
+        <section className="mt-20">
+          <div className="text-center mb-10">
+            <span className="text-xs text-orange-400/50 tracking-[0.5em] uppercase block mb-3">
+              Hamro Blog
+            </span>
+            <h2
+              className="text-3xl md:text-4xl font-black mb-4"
+              style={{
+                background: "linear-gradient(135deg, #FF6B35, #F7931E, #FFD700)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              History & Festival Stories
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
+              From 500 years of Nepali history to the origins of Dashain and Tihar —
+              long-form guides in plain English.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { to: "/blog/nepal-history", emoji: "📜", title: "History of Nepal", desc: "From the Malla kingdoms to the federal republic — 500 years that shaped today's festivals." },
+              { to: "/blog/dashain-story", emoji: "🌺", title: "Dashain Story", desc: "The legend of Durga and Mahishasura, the 15-day calendar, tika, and jamara." },
+              { to: "/blog/tihar-story", emoji: "🕯️", title: "Tihar Story", desc: "Yama and Yamuna, Lakshmi Puja, and five glowing days of lights." },
+            ].map((post) => (
+              <Link
+                key={post.title}
+                to={post.to}
+                className="p-6 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,107,53,0.06), rgba(247,147,30,0.02))",
+                  border: "1px solid rgba(255,107,53,0.1)",
+                }}
+              >
+                <span className="inline-flex items-center text-3xl mb-3"><Emoji char={post.emoji} size="1.6rem" /></span>
+                <h4 className="text-sm font-bold text-orange-300 mb-1.5">{post.title}</h4>
+                <p className="text-xs text-gray-500 leading-relaxed">{post.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

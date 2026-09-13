@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20">
       {/* Animated mandala background */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.07] pointer-events-none">
-        <svg className="w-[900px] h-[900px] animate-spin-slow" viewBox="0 0 200 200">
+        <svg className="w-[900px] h-[900px] animate-spin-slow will-change-transform" viewBox="0 0 200 200">
           <defs>
             <linearGradient id="hero-saffron" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#FF6B35" />
@@ -65,14 +65,6 @@ export default function Hero() {
         }}
       />
 
-      {/* Om symbol */}
-      <div
-        className="text-7xl md:text-9xl mb-6 animate-pulse-slow pointer-events-none select-none"
-        style={{ color: "#FF6B35", textShadow: "0 0 60px rgba(255,107,53,0.4)" }}
-      >
-        ॐ
-      </div>
-
       {/* Main heading */}
       <h1
         className="text-5xl sm:text-6xl md:text-8xl font-black text-center leading-none mb-4 animate-glow"
@@ -81,7 +73,7 @@ export default function Hero() {
           backgroundSize: "200% 200%",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          animation: "gradient-shift 8s ease infinite, glow 3s ease-in-out infinite",
+          animation: "glow 3s ease-in-out infinite",
         }}
       >
         Festival Nepal
